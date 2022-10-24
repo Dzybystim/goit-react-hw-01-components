@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import css from './ItemStatList.module.css'
+import {Item, Label, Percentage} from './ItemStatList.styled'
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 export const ItemStatList = ({label, percentage, numberOfFormats, statisticsWindowSize}) =>{
-    return <li  className={css.item} style={{
+    return <Item style={{
         flexBasis: statisticsWindowSize/numberOfFormats,
         backgroundColor: getRandomHexColor(),
       }}>
-        <span className={css.label}>{label}</span>
-        <span className={css.percentage}>{percentage}%</span>
-      </li>
+        <Label>{label}</Label>
+        <Percentage>{percentage}%</Percentage>
+      </Item>
 }
 
 ItemStatList.propTypes = {

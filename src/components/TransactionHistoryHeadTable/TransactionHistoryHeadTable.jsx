@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import './TransactionHistoryHeadTable.module.css'
+import {ThHead } from './TransactionHistoryHeadTable.styled'
 
 export const TransactionHistoryHeadTable = ({type, amount, currency}) => {
 return <thead>
 <tr>
-  <th>{type}</th>
-  <th>{amount}</th>
-  <th>{currency}</th>
+  <ThHead>{type}</ThHead>
+  <ThHead>{amount}</ThHead>
+  <ThHead>{currency}</ThHead>
 </tr>
 </thead>
 }

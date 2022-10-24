@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
-import css from './DataUser.module.css';
+import {Description, Avatar, Name, Tag, Location} from './DataUser.styled'
 
 export const DataUser = ({username, avatar, tag, location}) => {
 
-return <div className={css.description}>
-    <img
-      src={avatar}
+return <Description>
+    <Avatar
       alt={username}
-      className={css.avatar}
+      src={avatar}
     />
-    <p className={css.name}>{username}</p>
-    <p className={css.tag}>@{tag}</p>
-    <p className={css.location}>{location}</p>
-</div> 
+    <Name>{username}</Name>
+    <Tag>@{tag}</Tag>
+    <Location>{location}</Location>
+</Description> 
 }
 
 DataUser.propTypes = {

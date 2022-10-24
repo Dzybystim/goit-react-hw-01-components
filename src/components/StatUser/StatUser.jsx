@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
-import css from './StatUser.module.css';
+
+import {Stats, Item, Label, Quantity} from './StatUser.styled'
 
 export const StatUser = ({followers, views, likes}) => {
-return <ul className={css.stats}>
-  <li className={css.item}>
-    <span className={css.label}>Followers</span>
-    <span className={css.quantity}>{followers}</span>
-  </li>
-  <li className={css.item}>
-    <span className={css.label}>Views</span>
-    <span className={css.quantity}>{views}</span>
-  </li>
-  <li className={css.item}>
-    <span className={css.label}>Likes</span>
-    <span className={css.quantity}>{likes}</span>
-  </li>
-</ul>
+return <Stats>
+  <Item>
+    <Label>Followers</Label>
+    <Quantity>{followers}</Quantity>
+  </Item>
+  <Item>
+    <Label>Views</Label>
+    <Quantity>{views}</Quantity>
+  </Item>
+  <Item>
+    <Label>Likes</Label>
+    <Quantity>{likes}</Quantity>
+  </Item>
+</Stats>
 }
 
 StatUser.propTypes = {

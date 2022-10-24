@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import css from './StatList.module.css'
+import {StatListStyled} from './StatList.styled'
 import {ItemStatList} from 'components/ItemStatList/ItemStatList'
 
 export const StatList = ({statisticsData, numberOfFormats, statisticsWindowSize}) => {
-return <ul className={css.statlist}>
+return <StatListStyled>
 {statisticsData.map(({id, label, percentage}) => (
     <ItemStatList 
     key={id} 
@@ -12,7 +12,7 @@ return <ul className={css.statlist}>
     numberOfFormats={numberOfFormats} 
     statisticsWindowSize={statisticsWindowSize}/>
 ))}
-</ul>
+</StatListStyled>
 }
 
 StatList.propTypes = {

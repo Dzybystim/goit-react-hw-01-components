@@ -1,12 +1,12 @@
-
-import css from './TransactionHistory.module.css'
+import PropTypes from 'prop-types';
+import {TransactionHistoryStyled} from './TransactionHistory.styled'
 
 import {TransactionHistoryHeadTable} from 'components/TransactionHistoryHeadTable/TransactionHistoryHeadTable'
 import {TransactionHistoryBodyTable} from 'components/TransactionHistoryBodyTable/TransactionHistoryBodyTable'
 
 
 export const TransactionHistory = ({transactions}) => {
-return <table className={css.transactionHistory}>
+return <TransactionHistoryStyled>
 <TransactionHistoryHeadTable type="Type" amount="Amount" currency="Currency"/>
 <tbody>
 {transactions.map(({id, type, amount, currency})=>(
@@ -18,7 +18,10 @@ return <table className={css.transactionHistory}>
     />
 ))}
 </tbody>
-</table>
+</TransactionHistoryStyled>
 }
 
+TransactionHistory.propTypes = {
+    transactions: PropTypes.arrayOf(PropTypes.objectOf),
+}
 

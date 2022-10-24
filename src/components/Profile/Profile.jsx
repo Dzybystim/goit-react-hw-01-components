@@ -1,14 +1,16 @@
-import css from './Profile.module.css';
+
 import PropTypes from 'prop-types';
 import { DataUser } from 'components/DataUser/DataUser'
 import {StatUser} from 'components/StatUser/StatUser'
 
+import {ProfileStyled} from './Profile.styled'
+
 export const Profile = ({datauser}) => {
     const {username, avatar, tag, location, stats} = datauser
-    return <div className={css.profile}>
+    return <ProfileStyled>
         <DataUser username={username} avatar={avatar} tag={tag} location={location} />
         <StatUser followers={stats.followers} views={stats.views} likes={stats.likes}/>
-    </div>
+    </ProfileStyled>
 }
 
 
