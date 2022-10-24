@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 export const Description = styled.div`
 background-color: #f5f5ef;
+
+:hover,
+:focus 
+{ background-color: #dcdcd7; }
+
 `
 export const Avatar = styled.img`
 padding-top: 24px ;
@@ -26,6 +31,12 @@ padding-top: 12px ;
 font-size: 16px;
 text-align: center;
 color: #d6d6c2;
+
+:hover,
+:focus
+{
+    color: #abab9b;
+}
 `
 
 export const Location = styled.p`
@@ -35,4 +46,10 @@ padding-bottom: 24px;
 font-size: 24px;
 text-align: center;
 color: #d6d6c2;
+
+:hover,
+:focus
+{
+    color: #abab9b;
+}
 `
